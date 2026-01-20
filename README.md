@@ -23,7 +23,7 @@ This project demonstrates how AVL trees maintain balance through rotations durin
 No installation is required.
 1. Clone the repository:
    ```bash
-   git clone (https://github.com/lakshmi701/AVL-Visualization).git
+   git clone https://github.com/lakshmi701/AVL-Visualization.git
 2. Open the project folder and run:
     avl.html
     in any modern web browser.
@@ -34,5 +34,7 @@ Learning and teaching Data Structures
 Understanding AVL tree balancing and rotations
 
 Author:
+
 Lakshmi Prasanna Vemula
+
 GitHub: https://github.com/lakshmi701
