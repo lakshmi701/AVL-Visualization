@@ -1,189 +1,164 @@
-🌳 AVL Tree Visualizer
+# 🌳 AVL Tree Visualizer
 
-An interactive AVL Tree Visualization tool built using HTML, CSS, and Vanilla JavaScript.
+An interactive AVL Tree Visualization tool built using HTML, CSS, and Vanilla JavaScript.  
 This project demonstrates how self-balancing binary search trees work by visually showing insertions, deletions, balance factors, and rotations in real time.
 
-🧠 What is an AVL Tree?
+---
+
+## 🧠 What is an AVL Tree?
 
 An AVL Tree is a self-balancing Binary Search Tree (BST) where, for every node:
 
-Balance Factor = height(left subtree) − height(right subtree)
+    Balance Factor = height(left subtree) − height(right subtree)
 
 The balance factor must always be −1, 0, or +1.
 
-To maintain this balance, the tree performs rotations automatically after insertions and deletions.
+To maintain this balance, the tree automatically performs rotations after insertions and deletions.
 
-Supported Rotations
+---
 
-Left Rotation – fixes right-heavy imbalance
+## 🔄 Supported Rotations
 
-Right Rotation – fixes left-heavy imbalance
+1. Left Rotation  
+   Applied when a right-heavy imbalance occurs.
 
-Left-Right Rotation – left rotation on child + right rotation on node
+2. Right Rotation  
+   Applied when a left-heavy imbalance occurs.
 
-Right-Left Rotation – right rotation on child + left rotation on node
+3. Left-Right Rotation  
+   A left rotation on the child node followed by a right rotation on the parent node.
+
+4. Right-Left Rotation  
+   A right rotation on the child node followed by a left rotation on the parent node.
 
 All rotations are applied dynamically and logged during execution.
 
-🎮 Features & Usage
+---
 
-Tree Operations
+## 🎮 Features & Usage
 
-Insert Node
+### 🔢 Tree Operations
 
-Enter a numeric value and click Insert
+1. Insert Node  
+   Enter a numeric value and click Insert to add the node to the AVL tree. Duplicate values are automatically prevented.
 
-Duplicate values are prevented
+2. Delete Node  
+   Enter an existing value and click Delete to remove the node. The tree automatically rebalances after deletion.
 
-Delete Node
+3. Random Insert  
+   Inserts a randomly generated unique value between 1 and 100.
 
-Enter an existing value and click Delete
+4. Clear Tree  
+   Resets the entire tree and clears the operation history.
 
-Tree automatically rebalances after deletion
+---
 
-Random Insert
+## 📊 Live Visualization
 
-Inserts a random unique value (1–100)
+1. The tree is rendered using animated SVG graphics.
+2. Nodes are color-coded based on their balance factor.
+3. Green nodes represent balanced states with balance factor 0.
+4. Yellow nodes indicate slight imbalance with balance factor ±1.
+5. Red nodes indicate critical imbalance requiring rotation (±2).
+6. Each node displays its value and current balance factor.
 
-Clear Tree
+---
 
-Resets the entire tree and history
+## 📈 Tree Statistics
 
-📊 Live Visualization
+1. Displays inorder traversal, which is always sorted.
+2. Shows the total number of nodes in the tree.
+3. Displays the current height of the AVL tree.
 
-Animated SVG-based tree rendering
+---
 
-Nodes are color-coded based on balance factor:
+## 📜 Operation History
 
-🟢 Balanced (BF = 0)
+1. Tracks the last 10 operations performed.
+2. Logs insertions, deletions, and rotations.
+3. Uses visual icons to clearly distinguish operation types.
 
-🟡 Slightly imbalanced (BF = ±1)
+---
 
-🔴 Requires rotation (BF = ±2)
+## 🔔 Notifications
 
-Each node displays:
+1. Displays success notifications for valid operations.
+2. Shows warning messages for duplicate values.
+3. Shows error messages for invalid inputs or missing nodes.
+4. Provides clear, user-friendly feedback for all actions.
 
-Node value
+---
 
-Balance factor
+## 💻 Technical Implementation
 
-📈 Tree Statistics
+### Core Data Structure
 
-Inorder Traversal (always sorted)
+1. Uses an AVLNode class containing value, left child, right child, and height.
+2. Implements recursive insertion and deletion logic.
+3. Automatically rebalances the tree using AVL rotations.
+4. Calculates balance factor at every node after each operation.
 
-Total number of nodes
+---
 
-Height of the AVL tree
+### Visualization Logic
 
-📜 Operation History
+1. Uses pure SVG rendering without external libraries.
+2. Dynamically calculates node coordinates.
+3. Uses recursive layout positioning for tree structure.
+4. Applies smooth animations using CSS keyframes.
 
-Tracks last 10 operations:
+---
 
-Insertions
+### Key Algorithms Implemented
 
-Deletions
+1. Height calculation
+2. Balance factor computation
+3. Inorder traversal
+4. Minimum value node selection
+5. AVL rotations (LL, RR, LR, RL)
 
-Rotations
+---
 
-Includes visual icons for clarity
+## 🛠️ Technologies Used
 
-🔔 Notifications
+1. HTML5 for structure
+2. CSS3 for styling, gradients, and animations
+3. JavaScript (ES6) for AVL logic and DOM manipulation
+4. SVG for tree visualization
 
-Success, warning, and error notifications
+No external libraries or frameworks are required.
 
-User-friendly feedback for:
+---
 
-Invalid inputs
+## 🚀 How to Run the Project
 
-Duplicate values
+1. Clone or download the repository.
+2. Open avl.html in any modern web browser.
+3. Insert or delete values to visualize AVL tree operations.
 
-Missing nodes
+---
 
-💻 Technical Implementation
-Core Data Structure
+## 🤝 Contributing
 
-AVLNode class:
+1. Report bugs by opening an issue.
+2. Suggest new features or enhancements.
+3. Improve UI design or animations.
+4. Add support for additional tree traversals.
 
-value, left, right
+Please follow clean coding practices and test changes before submitting a pull request.
 
-height tracking
+---
 
-Recursive insertion and deletion
+## 📌 Future Enhancements
 
-Automatic rebalancing using rotations
+1. Step-by-step animation controls
+2. Preorder and Postorder traversal visualizations
+3. Rotation-specific animations
+4. Exportable tree structure
+5. Dark and light theme toggle
 
-Balance factor calculation at every node
+---
 
-Visualization Logic
+## 📜 License
 
-SVG rendering without external libraries
-
-Dynamic coordinate calculation for nodes
-
-Recursive layout positioning
-
-Smooth animations using CSS keyframes
-
-Key Algorithms Implemented
-
-Height calculation
-
-Balance factor computation
-
-Inorder traversal
-
-Minimum value node selection
-
-AVL rotations (LL, RR, LR, RL)
-
-🛠️ Technologies Used
-
-HTML5 – Structure
-
-CSS3 – Styling, gradients, animations
-
-JavaScript (ES6) – AVL logic & DOM manipulation
-
-SVG – Tree visualization
-
-No external libraries or frameworks required.
-
-🚀 How to Run the Project
-
-Clone or download the repository
-
-Open avl.html in any modern web browser
-
-Start inserting or deleting values to visualize AVL operations
-
-🤝 Contributing
-
-Contributions are welcome!
-
-You can help by:
-
-Reporting bugs
-
-Suggesting enhancements
-
-Improving UI or animations
-
-Adding new traversal visualizations
-
-Please follow clean code practices and test your changes before submitting a pull request.
-
-📌 Future Enhancements
-
-Step-by-step animation controls
-
-Preorder and Postorder traversal views
-
-Rotation-specific animations
-
-Export tree structure
-
-Dark/light theme toggle
-
-📜 License
-
-This project is open-source and available for educational and learning purposes.
+This project is open-source and intended for educational and learning purposes.
