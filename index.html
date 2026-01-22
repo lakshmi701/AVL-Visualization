@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVL Tree Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+    <body>
+    <div class="container">
+        <header>
+            <h1>AVL Tree Visualization</h1>
+            <p class="subtitle">Interactive self-balancing binary search tree with live rotations</p>
+        </header>
+
+        <div class="controls">
+            <div class="input-group">
+                <input type="number" id="nodeValue" placeholder="Enter value" min="-999" max="999">
+                <button class="btn-insert" onclick="insertNode()">Insert</button>
+                <button class="btn-delete" onclick="deleteNode()">Delete</button>
+            </div>
+            <button class="btn-random" onclick="insertRandom()">Random Insert</button>
+            <button class="btn-clear" onclick="clearTree()">Clear Tree</button>
+        </div>
+
+        <div class="visualization-container">
+            <svg id="tree-canvas"></svg>
+            <div class="empty-state" id="empty-state">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="8" r="4"/>
+                    <path d="M12 12v4"/>
+                    <path d="M8 20h8"/>
+                    <path d="M12 16l-4 4"/>
+                    <path d="M12 16l4 4"/>
+                </svg>
+                <p>Insert a value to start building your AVL tree</p>
+            </div>
+        </div>
+
+        <div class="info-panel">
+            <div class="info-card">
+                <h3>📊 Inorder Traversal</h3>
+                <div class="traversal-display" id="traversal"></div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-value" id="node-count">0</div>
+                        <div class="stat-label">Nodes</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="tree-height">0</div>
+                        <div class="stat-label">Height</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>📜 Operation History</h3>
+                <div class="history-list" id="history"></div>
+            </div>
+
+            <div class="info-card">
+                <h3>🎨 Legend</h3>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color balanced"></div>
+                        <span>Balanced (BF = 0)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color warning"></div>
+                        <span>Slight imbalance (BF = ±1)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color critical"></div>
+                        <span>Needs rotation (BF = ±2)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+ <script src="script.js"></script>
+
+  </body>
+</html>
