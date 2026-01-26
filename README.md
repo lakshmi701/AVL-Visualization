@@ -159,6 +159,13 @@ Please follow clean coding practices and test changes before submitting a pull r
 
 ---
 
+## 🔗 Live Demo
+You can try the live demo here:
+
+➡️ https://lakshmi701.github.io/AVL-Visualization/
+
+---
+
 ## 📜 License
 
 This project is open-source and intended for educational and learning purposes.
