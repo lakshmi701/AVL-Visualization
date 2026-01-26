@@ -178,6 +178,12 @@ You can try the live demo here:
 
 ---
 
+## 📸 Demo Screenshot
+
+![AVL Tree Visualizer Demo](assets/demo/DEMO-SS.png)
+
+---
+
 ## 📜 License
 
 This project is open-source and intended for educational and learning purposes.
