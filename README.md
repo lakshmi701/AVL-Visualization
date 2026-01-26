@@ -180,7 +180,7 @@ You can try the live demo here:
 
 ## 📸 Demo Screenshot
 
-![AVL Tree Visualizer Demo](assets/demo/DEMO-SS.png)
+![AVL Tree Visualizer Demo](assets/rotations/DEMO-SS.png)
 
 ---
 
