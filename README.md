@@ -22,14 +22,26 @@ To maintain this balance, the tree automatically performs rotations after insert
 1. Left Rotation  
    Applied when a right-heavy imbalance occurs.
 
-2. Right Rotation  
+   ### Left Rotation (LL)
+    ![Left Rotation](assets/rotations/LL.png)
+
+3. Right Rotation  
    Applied when a left-heavy imbalance occurs.
 
-3. Left-Right Rotation  
+   ### Right Rotation (RR)
+   ![Right Rotation](assets/rotations/RR.png)
+
+5. Left-Right Rotation  
    A left rotation on the child node followed by a right rotation on the parent node.
 
-4. Right-Left Rotation  
+   ### Left-Right Rotation (LR)
+   ![Left-Right Rotation](assets/rotations/LR.png)
+
+7. Right-Left Rotation  
    A right rotation on the child node followed by a left rotation on the parent node.
+
+   ### Right-Left Rotation (RL)
+   ![Right-Left Rotation](assets/rotations/RL.png)
 
 All rotations are applied dynamically and logged during execution.
 
